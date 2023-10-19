@@ -7,6 +7,7 @@
 const ID = document.getElementById("ID");
 const ID_content = document.getElementById("ID_content");
 const root = document.getElementById("root");
+ID_content.innerText = "";
 if (ID_content.innerText  === a) {
   root.style.backgroundColor = "red";
 }
