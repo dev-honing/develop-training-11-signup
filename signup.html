@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>회원가입 페이지</title>
   <link rel="stylesheet" href="common.css">
-  <script src="validation.js"></script>
+  <script src="./validation.js"></script>
   <style>
     #container {
       justify-content: center;
@@ -70,7 +70,7 @@
             User Name<input type="text" id="UserName_content" placeholder="사용자 이름을 입력하세요">
           </div>
           <div id="ID">
-            ID<input type="text" id="ID_content" placeholder="사용할 ID를 입력하세요" value="">
+            ID<input type="text" id="ID_content" placeholder="사용할 ID를 입력하세요">
           </div>
           <div id="PW">           
             PW<input type="password" id="PW_content" placeholder="사용할 비밀번호를 입력하세요">
@@ -87,5 +87,9 @@
     </div>
     <div id="footer"></div>
   </div>
+  <script>
+    const root = document.getElementById("root");
+    console.dir(root);
+  </script>
 </body>
 </html>
