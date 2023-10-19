@@ -8,4 +8,4 @@ const ID = document.getElementById("ID");
 const ID_content = document.getElementById("ID_content");
 const root = document.getElementById("root");
 
-// 배열을 만든다
+
