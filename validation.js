@@ -6,10 +6,10 @@
 
 const ID = document.getElementById("ID");
 const ID_content = document.querySelector("ID_content");
-// const root = document.getElementById("root");
+const root = document.getElementById("root");
 
 // 배열 만들기
 const dataArr = [];
 
 // input에 입력한 데이터 조회하기(DOM 접근)
-console.dir(root);
+console.dir(root); // ! null
