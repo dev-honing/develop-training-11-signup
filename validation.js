@@ -4,12 +4,12 @@
 // * 3. Email 입력은 @이 있어야 하고, @ 뒤에는 .이 존재해야 함
 // * 4. 모든 사항을 충족했을 때에만 회원가입 버튼이 동작하도록 함
 
-const ID = document.getElementById("ID");
-const ID_content = document.querySelector("ID_content");
-const root = document.getElementById("root");
+// const ID = document.getElementById("ID");
+// const ID_content = document.querySelector("ID_content");
+// const root = document.getElementById("root");
 
-// 배열 만들기
-const dataArr = [];
+// // 배열 만들기
+// const dataArr = [];
 
-// input에 입력한 데이터 조회하기(DOM 접근)
-console.dir(root); // ! null
+// // input에 입력한 데이터 조회하기(DOM 접근)
+// console.dir(root); // ! null
