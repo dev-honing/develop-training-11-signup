@@ -160,10 +160,15 @@
   </div>
   <script>
     const root = document.getElementById("root");
+    const container = document.getElementById("container");
     const ID = document.getElementById("ID");
     const ID_content = document.getElementById("ID_content");
-    const container = document.getElementById("container");
     const ID_error = document.getElementById("ID_error");
+    const UserName_content = document.getElementById("UserName_content");
+    
+    // UserName 한글 금지
+    UserName_content = 
+
     ID_content.addEventListener("keydown", () => {
       for (i=0; i < ID_content.value.length; i++){
         const keyArr = [];
@@ -171,15 +176,18 @@
         console.log(keyArr);
         
         //  ID는 6자리 이상
+        // 6자리 이하일 때, 경고!
         if (ID_content.value.length < 6){
           ID_alert();
         }
-        else if (ID_content.value.length = 6){
+        // 6자리 이상이면 경고 해제
+        else if (ID_content.value.length <= 6){
           ID_error.innerText = "";
-          }
           
+
         }
-    })
+      }
+      })
     
     
     ID_content.addEventListener('keydown', (event) => {
