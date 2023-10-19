@@ -6,8 +6,16 @@
   <title>편지 페이지</title>
   <link rel="stylesheet" href="common.css">
   <style>
-    #container div {}
-    #container > #greet {}
+    #container div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    #container > #greet {
+      width: 30vw;
+      height: 40vh;
+    }
     #container > #post {}
 
   </style>
@@ -16,8 +24,19 @@
   <div id="root">
     <div id="header"></div>
     <div id="container">
-      <div id="greet"></div>
-      <div id="post"></div>
+      <div id="greet">
+        <!-- ID -->
+        <div id="ID"></div>님 반갑습니다!
+        <div id="greet-msg">저에게 편지를 보내주세요</div>
+      </div>
+      <div id="post">
+        Title<div id="title">
+          <input type="text" id="title">
+        </div>
+        Text <div id="text">
+          <input type="text" id="text">
+        </div>
+      </div>
     </div>
     <div id="footer"></div>
   </div>
