@@ -70,7 +70,7 @@
             User Name<input type="text" id="UserName_content" placeholder="사용자 이름을 입력하세요">
           </div>
           <div id="ID">
-            ID<input type="text" id="ID_content" placeholder="사용할 ID를 입력하세요" value="ho1997">
+            ID<input type="text" id="ID_content" placeholder="사용할 ID를 입력하세요">
           </div>
           <div id="PW">           
             PW<input type="password" id="PW_content" placeholder="사용할 비밀번호를 입력하세요">
@@ -91,11 +91,36 @@
     const root = document.getElementById("root");
     const ID = document.getElementById("ID");
     const ID_content = document.getElementById("ID_content");
-    if ( ID_content.textContent === "a"){
-      root.style.backgroundColor = "red";
+    const container = document.getElementById("container");
+    ID_content.addEventListener("keydown", () => {
+      run();
+    })
+    function run(){
+      if(ID_content.value === "a"){
+        root.style.backgroundColor = "red";
+      }
     }
-
-    console.dir(ID_content.value) // ho1997
-  </script>
+    const keyArr = [];
+    
+    ID_content.addEventListener('keydown', (event) => {
+      for (i=0; i < ID_content.value.length; i++){
+        keyArr[i] = ID_content.value
+        console.log(keyArr);;
+        if (ID_content.value.length < 5){
+          setTimeout(ID_alert, 100);
+          setTimeout(ID_alert_initailize, 200);
+          clearTimeout(ID_alert_initailize);
+          function ID_alert(){
+            container.textContent = "ID 길이는 5자리 이상이야 합니다.";
+          }
+          function ID_alert_initailize(){
+            container.textContent = "";
+          }
+        }
+        else {
+          console.log("사용가능한 ID입니다.");
+        }}
+    });
+    </script>
 </body>
 </html>
