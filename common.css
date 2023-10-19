@@ -12,12 +12,15 @@
 #root > #header {
   width: 100vw;
   height: 10vh;
+  display: flex;
 }
 #root > #container {
   width: 100vw;
   height: 80vh;
+  display: flex;
 }
 #root > #footer {
   width: 100vw;
   height: 10vh;
+  display: flex;
 }
