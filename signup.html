@@ -165,21 +165,12 @@
     const container = document.getElementById("container");
     const ID_error = document.getElementById("ID_error");
     ID_content.addEventListener("keydown", () => {
-      run();
-    })
-    function run(){
-      if(ID_content.value === "a"){
-        root.style.backgroundColor = "red";
-      }
-    }
-    const keyArr = [];
-    
-    ID_content.addEventListener('keydown', (event) => {
       for (i=0; i < ID_content.value.length; i++){
+        const keyArr = [];
         keyArr[i] = ID_content.value
         console.log(keyArr);
         
-        // ID는 6자리 이상
+        //  ID는 6자리 이상
         if (ID_content.value.length < 6){
           ID_alert();
         }
@@ -188,6 +179,10 @@
           }
           
         }
+    })
+    
+    
+    ID_content.addEventListener('keydown', (event) => {
         
         // 한국어 금지
         if (ID_content.value === "KOREAN"){
