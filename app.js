@@ -10,4 +10,8 @@ http.createServer((req, res) => {
   if (req.method === "GET" && req.url === "/") {
     fs.readFile("./index.html; charset=utf-8")
   }
+  // 로그인
+  else if (req.method === "GET" && req.url === "/login"){}
+  // 회원가입
+  else if (req.method === "GET" && req.url === "/signup"){}
 })
