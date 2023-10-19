@@ -7,6 +7,5 @@
 const ID = document.getElementById("ID");
 const ID_content = document.getElementById("ID_content");
 const root = document.getElementById("root");
-if (ID_content.textContent === "a" ) {
-  root.style.backgroundColor = "red";
-}
+
+// 배열을 만든다
