@@ -21,8 +21,7 @@
       width: 35vw;
       height: 60vh;
       color: grey;
-      border: 1px solid #d9d9d9;
-      
+      margin-left: 30vw;
     }
     #container > #errors {
       display: flex;
@@ -32,7 +31,6 @@
       width: 35vw;
       height: 60vh;
       color: grey;
-      border: 1px solid #d9d9d9;
     }
     #errors > div{
       margin-top: 10vh;
@@ -48,11 +46,13 @@
       width: 25rem;
       height: 3vh;
       border: none;
-      color: red;
-      font-weight: bolder;
       text-align: center;
       vertical-align: middle;
       margin: 2px;
+
+      font-weight: bolder;
+      color: #ff003e;
+      display: inline-block;
     }
     
     form {
@@ -178,23 +178,30 @@
       for (i=0; i < ID_content.value.length; i++){
         keyArr[i] = ID_content.value
         console.log(keyArr);
-        if (ID_content.value.length < 5){
-          function ID_alert(){
-            ID_error.innerText = "5자리 이상";
-            // if (ID.append !== "5자리 이상"){
-            //   ID.append("5자리 이상");
-            // }
-          }
+        
+        // ID는 6자리 이상
+        if (ID_content.value.length < 6){
           ID_alert();
         }
+        else if (ID_content.value.length = 6){
+          ID_error.innerText = "";
+          }
+          
+        }
+        
         // 한국어 금지
-        else if (ID_content.value === "KOREAN"){
+        if (ID_content.value === "KOREAN"){
           console.error("ID로 사용할 수 없습니다.")
         }
         else {
           console.log("사용가능한 ID입니다.");
         }}
-    });
-    </script>
+      );
+      
+      // ID_경고
+      function ID_alert(){
+        ID_error.innerText = "ID는 5자리 이상으로 생성해주세요.";
+      }
+      </script>
 </body>
 </html>
