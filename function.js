@@ -51,3 +51,10 @@ function add (a, b){
 run();
 // 5-2. 매개변수가 둘
 console.log(add(2,3));
+
+// * 심화학습
+// 6. 즉시 실행 표현(Immediately-invoked expression)
+const hello = (function () {
+  console.clear();
+  console.log("hello")
+})()
