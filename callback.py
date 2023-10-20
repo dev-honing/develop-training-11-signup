@@ -5,11 +5,11 @@
 def call(func):
   func()
 
-def hello():
+def greet():
   print("hello")
 
 # 호출
-call(hello)
+call(greet) # hello
 
 # todo 매개변수가 하나일 때, 두 개의 함수를 정의하지 않고, 하나로 묶어 정의하는 방식이 있는지 알아보기
 

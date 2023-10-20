@@ -36,7 +36,7 @@ console.log(outerFour()); // undefined
 
 // 3-2. 매개변수가 둘인 화살표 함수
 const name_Greet = (name, greet) => {console.log(`${name}, ${greet}`)};
-console.clear();
+// console.clear();
 name_Greet("A", "hi");
 name_Greet("B", "hello")
 name_Greet("C", "안녕")
@@ -47,17 +47,16 @@ name_Greet("D", "안녕하세요")
 // 3-3. 매개변수가 셋인 화살표 함수
 const Info = (country, name, age) => {console.log(`국적: ${country}, 이름: ${name}, 나이: ${age}`)};
 Info("대한민국", "변호녕", "26");
-
 // todo 아래와 같이 정보 관리가 가능한가?
 // Info_1 = "대한민국", "A", "20"
 // Info_2 = "미국", "B", "30"
 // Info_3 = "영국", "C", "40"
-console.clear();
+// console.clear();
 // ! 실패
-for (i=0; i<3; i++){
-  const Info_[i] = (country, name, age) => {console.log(`국적: ${country}, 이름: ${name}, 나이: ${age}`)};
-  console.log(Info_[i]);
-};
+// for (i=0; i<3; i++){
+//   const Info_[i] = (country, name, age) => {console.log(`국적: ${country}, 이름: ${name}, 나이: ${age}`)};
+//   console.log(Info_[i]);
+// };
 
 // 4. 콜백함수
 // * 정의
@@ -79,6 +78,11 @@ console.log(add(2,3));
 
 // * 심화학습
 // 5. 즉시 실행 표현(Immediately-invoked expression)
-const hello = (function () {
-  console.log("hello")
-})()
+const startNow = (function () {
+  console.log("즉시실행")
+})
+()
+const startTwo = (function (){
+  console.log("두번째 즉시실행");
+})
+()

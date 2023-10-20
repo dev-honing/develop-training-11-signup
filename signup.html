@@ -124,7 +124,7 @@
   <div id="root">
     <div id="header"></div>
     <div id="container">
-        <!-- ! action 나중에 채우기 -->
+        <!-- todo action 나중에 채우기 -->
         <div id="forms">
         <form action="" method="get">
           <div id="UserName">
@@ -175,13 +175,13 @@
         keyArr[i] = ID_content.value
         console.log(keyArr);
         
-        //  ID는 6자리 이상
-        // 6자리 이하일 때, 경고!
-        if (ID_content.value.length < 6){
+        // ID는 6자리 이상
+        // 6자리 미만일 때, 경고!
+        if (ID_content.value.length < 5){
           ID_alert();
         }
         // 6자리 이상이면 경고 해제
-        else if (ID_content.value.length <= 6){
+        else if (ID_content.value.length >= 5){
           ID_error.innerText = "";
         }
       }
@@ -190,7 +190,7 @@
     
     ID_content.addEventListener('keydown', (event) => {
         
-        // 한국어 금지
+        // todo 한국어 금지
         if (ID_content.value === "KOREAN"){
           console.error("ID로 사용할 수 없습니다.")
         }
@@ -201,7 +201,7 @@
       
       // ID_경고
       function ID_alert(){
-        ID_error.innerText = "ID는 5자리 이상으로 생성해주세요.";
+        ID_error.innerText = "ID는 6자리 이상으로 생성해주세요.";
       }
       </script>
 </body>
