@@ -18,3 +18,9 @@ const outerTwo = function(){
 console.log(outerTwo); // [Function: outerTwo]
 console.log(outerTwo()); // bye
 // ! 변수로 선언했기 때문에 변수 자체를 호출하면 될 것 같지만 사실상 함수 이름처럼 호출해야 함
+
+// 3. 화살표 함수
+const outerThree = () => "wow";
+console.log(outerThree); // [Function: outerThree]
+console.log(outerThree()); // wow
+// ! 화살표 함수도 익명함수 호출 형식과 같음
