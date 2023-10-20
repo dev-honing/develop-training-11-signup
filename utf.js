@@ -1,11 +1,16 @@
 // UTF-8로 변환 연습
 
-// TextEncoder() 사용해보기
-const encoder = new TextEncoder();
-const UTF_8_Arr = encoder.encode("안녕");
-console.log(UTF_8_Arr); // Uint8Array(6) [236, 149, 136, 235, 133, 149]
+// 함수화 해보기
+function STRtoUTF8(){
+  const encoder = new TextEncoder();
+  const UTF8 = encoder.encode("");
+  console.log(`UTF-8로 변환을 완료했습니다.`);
+  console.log(`UTF-8: ${UTF8}`);
 
-// TextDecoder()로 다시 변환
-const decoder = new TextDecoder();
-const toSTR = decoder.decode(UTF_8_Arr);
-console.log(toSTR);
+}
+function UTF8toSTR(){
+  const decoder = new TextDecoder();
+  const STR = decoder.decode("");
+  console.log(`문자열로 변환을 완료했습니다.`)
+  console.log(`STR: ${STR}`);
+}
