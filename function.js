@@ -48,6 +48,17 @@ name_Greet("D", "안녕하세요")
 const Info = (country, name, age) => {console.log(`국적: ${country}, 이름: ${name}, 나이: ${age}`)};
 Info("대한민국", "변호녕", "26");
 
+// todo 아래와 같이 정보 관리가 가능한가?
+// Info_1 = "대한민국", "A", "20"
+// Info_2 = "미국", "B", "30"
+// Info_3 = "영국", "C", "40"
+console.clear();
+// ! 실패
+for (i=0; i<3; i++){
+  const Info_[i] = (country, name, age) => {console.log(`국적: ${country}, 이름: ${name}, 나이: ${age}`)};
+  console.log(Info_[i]);
+};
+
 // 4. 콜백함수
 // * 정의
 // 4-1. 매개변수가 하나
