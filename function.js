@@ -27,33 +27,33 @@ console.log(outerThree); // [Function: outerThree]
 console.log(outerThree()); // wow
 // ! 화살표 함수도 익명함수 호출 형식과 같음
 
-// 4. 매개변수가 하나인 화살표 함수
+// 3-1. 매개변수가 하나인 화살표 함수
 // * 정의
 const outerFour = a => a;
 // * 호출
 console.log(outerFour); // [Function: outerFour]
 console.log(outerFour()); // undefined
 
-// 5. 콜백함수
+// 4. 콜백함수
 // * 정의
-// 5-1. 매개변수가 하나
+// 4-1. 매개변수가 하나
 function run(callback){
   console.log("콜백하기")
   return callback; // ! 옳은 작성 방식 - VS Code가 주황색으로 가이드 해주는 모습
   return callback(); // ! 틀린 작성 방식 - TypeError: callback is not a function
 }
-// 5-2. 매개변수가 둘
+// 4-2. 매개변수가 둘
 function add (a, b){
   return a + b;
 }
 // * 호출
-// 5-1. 매개변수가 하나
+// 4-1. 매개변수가 하나
 run();
-// 5-2. 매개변수가 둘
+// 4-2. 매개변수가 둘
 console.log(add(2,3));
 
 // * 심화학습
-// 6. 즉시 실행 표현(Immediately-invoked expression)
+// 5. 즉시 실행 표현(Immediately-invoked expression)
 const hello = (function () {
   console.clear();
   console.log("hello")
