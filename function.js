@@ -34,6 +34,17 @@ const outerFour = a => a;
 console.log(outerFour); // [Function: outerFour]
 console.log(outerFour()); // undefined
 
+// 3-2. 매개변수가 둘인 화살표 함수
+const name_Greet = (name, greet) => {console.log(`${name}, ${greet}`)};
+console.clear();
+name_Greet("A", "hi");
+name_Greet("B", "hello")
+name_Greet("C", "안녕")
+name_Greet("D", "안녕하세요")
+// * 매개변수가 둘이면 어떨까 생각하면서 작성해봤는데
+// * 나이별/국가별 대응이 가능하고 상당히 작성이 편리하겠다는 생각이 든다.
+
+
 // 4. 콜백함수
 // * 정의
 // 4-1. 매개변수가 하나
@@ -55,6 +66,5 @@ console.log(add(2,3));
 // * 심화학습
 // 5. 즉시 실행 표현(Immediately-invoked expression)
 const hello = (function () {
-  console.clear();
   console.log("hello")
 })()
