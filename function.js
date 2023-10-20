@@ -24,3 +24,8 @@ const outerThree = () => "wow";
 console.log(outerThree); // [Function: outerThree]
 console.log(outerThree()); // wow
 // ! 화살표 함수도 익명함수 호출 형식과 같음
+
+// 4. 매개변수가 하나인 화살표 함수
+const outerFour = a => a;
+console.log(outerFour); // [Function: outerFour]
+console.log(outerFour()); // undefined
