@@ -1,5 +1,5 @@
 // 수업에서 배운 함수 선언 방식 4가지 복습 - 231011
-
+// todo 선언식과 표현식 정리하기
 // 1. 기명함수
 // * 정의
 function outerOne(){
@@ -42,16 +42,12 @@ function run(callback){
   return callback; // ! 옳은 작성 방식 - VS Code가 주황색으로 가이드 해주는 모습
   return callback(); // ! 틀린 작성 방식 - TypeError: callback is not a function
 }
-
-
 // 5-2. 매개변수가 둘
 function add (a, b){
   return a + b;
 }
-
 // * 호출
 // 5-1. 매개변수가 하나
 run();
-
 // 5-2. 매개변수가 둘
 console.log(add(2,3));
