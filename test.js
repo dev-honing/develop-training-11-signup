@@ -8,8 +8,8 @@
 // const arr = [1, 2, 3];
 // console.log(typeof(arr));
 
-
-for (i=0; i<3; i++){
-  const Info_[i] = (country, name, age) => {console.log(`국적: ${country}, 이름: ${name}, 나이: ${age}`)};
-};
+// ! 안되네...
+// for (i=0; i<3; i++){
+//   const Info_[i] = (country, name, age) => {console.log(`국적: ${country}, 이름: ${name}, 나이: ${age}`)};
+// };
 
