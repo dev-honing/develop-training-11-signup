@@ -252,9 +252,9 @@ else if (EmailArr.includes(".") !== true ){
 }
 
 const testArr = ["bhn@naver"];
-console.log(testArr.includes("bhn@")); // false
 console.log(testArr.includes("bhn@naver")); // true
-// ! arr.includes() 메서드는 완벽하게 일치하는 것만 찾을 수 있다
+// -> 배열의 인덱스를 지정해주고 나서 조회에 성공함
+console.log(testArr[0].includes("bhn@")); // true
       </script>
 </body>
 </html>
