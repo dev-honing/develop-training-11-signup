@@ -242,7 +242,11 @@ PW_content_check.onkeyup = PW_checking;
 const EmailArr = [];
 const EmailTyped = "#";
 EmailArr.push(EmailTyped);
-console.log(EmailArr); // '#'
+
+// arr.includes() 메서드로 조회하기
+console.log(EmailArr.includes("@")); // false
+console.log(EmailArr.includes("#")); // true
+
 
       </script>
 </body>
