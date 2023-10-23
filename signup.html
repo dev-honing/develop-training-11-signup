@@ -167,7 +167,7 @@
     const UserName_content = document.getElementById("UserName_content");
     
     // UserName 한글 금지
-    UserName_content = 
+    // UserName_content = 
 
     ID_content.addEventListener("keydown", () => {
       for (i=0; i < ID_content.value.length; i++){
@@ -203,6 +203,23 @@
       function ID_alert(){
         ID_error.innerText = "ID는 6자리 이상으로 생성해주세요.";
       }
+
+
+      // ID에 소문자와 대문자가 포함되어야 함
+      const ID_letter = '~';
+
+      // toUpperCase() 메서드는 문자열을 대문자로 변환한 값을 반환함
+      // toLowerCase() 메서드는 문자열을 소문자로 변환한 값을 반환함
+      
+      // 만약 ID_letter를 대문자로 변환했는데 기존의 ID_letter와 일치한다면? 원래 대문자였다는 것
+      if (ID_letter.toUpperCase() === ID_letter){
+        console.log("대문자입니다."); // 대문자임을 출력
+      }
+      // 만약 ID_letter를 소문자로 변환했는데 기존의 ID_letter와 일치한다면? 원래 소문자였다는 것
+      if (ID_letter.toLowerCase() === ID_letter){
+        console.log("소문자입니다."); // 소문자임을 출력
+      }
+      
       </script>
 </body>
 </html>
