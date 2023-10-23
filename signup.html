@@ -240,19 +240,15 @@ PW_content_check.onkeyup = PW_checking;
 
 // Email 형식 확인 (@ & .)
 const EmailArr = [];
-Email_content.value = "";
+Email_content.value = "bhn@naver";
 EmailArr.push(Email_content.value);
-
+console.log(EmailArr)
 // arr.includes() 메서드로 배열 조회하기
-// @를 포함하는지
-EmailArr.includes("@")
-// .을 포함하는지
-EmailArr.includes(".")
-if (EmailArr.includes("@") === false ){
-  console.error("이메일 형식에는 @가 포함되어야 합니다.");
+if (EmailArr.includes("@") !== true ){
+  Email_content.setCustomValidity("이메일 형식에는 '@'가 포함되어야 합니다.");
 }
-else if (EmailArr.includes(".") === false ){
-  console.error("이메일 형식에는 .이 포함되어야 합니다.")
+else if (EmailArr.includes(".") !== true ){
+    Email_content.setCustomValidity("이메일 형식에는 '.'이 포함되어야 합니다.");
 }
 
       </script>
