@@ -251,6 +251,10 @@ else if (EmailArr.includes(".") !== true ){
     Email_content.setCustomValidity("이메일 형식에는 '.'이 포함되어야 합니다.");
 }
 
+const testArr = ["bhn@naver"];
+console.log(testArr.includes("bhn@")); // false
+console.log(testArr.includes("bhn@naver")); // true
+// ! arr.includes() 메서드는 완벽하게 일치하는 것만 찾을 수 있다
       </script>
 </body>
 </html>
