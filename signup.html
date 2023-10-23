@@ -239,24 +239,37 @@ PW_content_check.onkeyup = PW_checking;
 
 
 // Email 형식 확인 (@ & .)
-
-// arr.includes() 메서드로 배열 조회하기
+Email_content.value = ""; 
 const EmailArr = [];
-Email_content.value = "";
 EmailArr.push(Email_content.value);
+
+// todo 함수화 과정에서 PW와 다르게 잘 안된다.
 function Email_check() {
-  if (EmailArr[0].indexOf("@") === false ){
-    Email_content.setCustomValidity("이메일 형식에는 '@'가 포함되어야 합니다.");
-  } 
-  else  if ( EmailArr[0].indexOf(".") === false ){
-      Email_content.setCustomValidity("이메일 형식에는 '.'이 포함되어야 합니다.");        
-    }
-    
+  if (EmailArr[0].indexOf("@") === true){
+    Email_content.setCustomValidity("")
+  } else {
+    Email_content.setCustomValidity("이메일 형식은 '@'가 포함되어야 합니다.")
   }
+}
+//   if (EmailArr[0].indexOf("@") === true ){
+//     Email_content.setCustomValidity("");
+//   } else {
+//     Email_content.setCustomValidity("이메일 형식에는 '@'가 포함되어야 합니다.")
+//     console.error("@가 포함되어야 합니다.");
+//   }
+// }
+// function Email_check_dot(){
+//   if ( EmailArr[0].indexOf(".") === true ){
+//     Email_content.setCustomValidity("");
+//   } else {
+//     Email_content.setCustomValidity("이메일 형식에는 '.'이 포함되어야 합니다.")
+//     console.error(".이 포함되어야 합니다.")
+//   }
+// }
 
 
 Email_content.onchange = Email_check
-Email_content.onkeyup = Email_check
+Email_content.onkeydown = Email_check
       </script>
 </body>
 </html>
