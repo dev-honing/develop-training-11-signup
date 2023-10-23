@@ -225,12 +225,16 @@
 
 
 // 입력된 비밀번호 두 개가 동일한지 확인
-if (PW_content.value === PW_content_check.value) {
-  PW_content.setCustomValidity("");
+function PW_checking(){
+  if (PW_content.value === PW_content_check.value) {
+    PW_content_check.setCustomValidity("");
+  }
+  else {
+    PW_content_check.setCustomValidity("패스워드가 일치하지 않습니다.");
 }
-else {
-  PW_content.setCustomValidity("패스워드가 일치하지 않습니다.");
 }
+PW_content.onchange = PW_checking;
+PW_content_check.onkeyup = PW_checking;
       </script>
 </body>
 </html>
