@@ -225,7 +225,12 @@
 
 
 // 입력된 비밀번호 두 개가 동일한지 확인
-
+if (PW_content.value === PW_content_check.value) {
+  PW_content.setCustomValidity("");
+}
+else {
+  PW_content.setCustomValidity("패스워드가 일치하지 않습니다.");
+}
       </script>
 </body>
 </html>
